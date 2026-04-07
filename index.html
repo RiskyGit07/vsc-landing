@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Dev | Portfolio Testing</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <p>Loading creative experience...</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-text">&lt;/&gt;</span>
+        <span class="logo-name">CreativeDev</span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        Available for freelance
+      </div>
+      <h1 class="hero-title">
+        Creating digital <span class="gradient-text">masterpieces</span><br>
+        that make impact
+      </h1>
+      <p class="hero-desc">
+        Hi, I'm Moh. Risky — UI/UX Designer & Frontend Developer based in Bali. 
+        I craft beautiful, fast, and user-centered digital experiences.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" id="exploreBtn">
+          Explore Work <i class="fas fa-arrow-down"></i>
+        </button>
+        <button class="btn btn-secondary" id="resumeBtn">
+          Download CV <i class="fas fa-download"></i>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="48">0</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="32">0</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="image-wrapper">
+            <div class="image-placeholder">
+              <i class="fas fa-user-astronaut"></i>
+            </div>
+            <div class="experience-badge">
+              <span>7+</span>
+              <p>Years of<br>Creativity</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Turning ideas into <span class="gradient-text">reality</span></h2>
+          <p class="about-text">I'm a creative developer with passion for building meaningful digital products. I believe that great design is not just about how it looks, but how it works.</p>
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <strong>Name:</strong>
+                <p>Moh. Risky</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Location:</strong>
+                <p>Bali, Indonesia</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <p>alexa@creativedev.com</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fab fa-github"></i>
+              <div>
+                <strong>GitHub:</strong>
+                <p>/alexacreative</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Do</span>
+        <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+        <p>Professional services that help businesses grow digitally</p>
+      </div>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- Work Section (Portfolio) -->
+  <section id="work" class="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p>Some of my best creative works</p>
+      </div>
+      <div class="work-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="ui">UI/UX</button>
+      </div>
+      <div class="work-grid" id="workGrid"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What <span class="gradient-text">Clients</span> Say</h2>
+      </div>
+      <div class="testimonial-slider" id="testimonialSlider"></div>
+      <div class="slider-controls">
+        <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-left">
+          <span class="section-tag">Get In Touch</span>
+          <h2>Let's work <span class="gradient-text">together</span></h2>
+          <p>Have a project in mind? I'd love to hear about it. Let's create something amazing!</p>
+          <div class="contact-social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="contactName" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="contactEmail" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <select id="contactService">
+                <option value="">Select Service</option>
+                <option value="web">Web Development</option>
+                <option value="mobile">Mobile App</option>
+                <option value="ui">UI/UX Design</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea rows="4" id="contactMsg" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fas fa-paper-plane"></i></button>
+            <div id="contactFeedback" class="contact-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text">&lt;/&gt;</span>
+          <span>CreativeDev</span>
+        </div>
+        <p class="footer-copyright">© 2025 CreativeDev Portfolio | Testing Mode - All demo content</p>
+        <button class="back-to-top" id="backToTop">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
